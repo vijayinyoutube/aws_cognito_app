@@ -1,4 +1,4 @@
-import 'package:aws_cognito_app/Presentation/Routes/generated_routes.dart';
+import 'Presentation/Routes/generated_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'AWS Cognito',
       theme: ThemeData(
         primarySwatch: Colors.blue,
