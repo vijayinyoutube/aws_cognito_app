@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../Data/Services/AWS/aws_cognito.dart';
 import '../../../Components/app_bar.dart';
 import '../../../Components/primary_btn.dart';
 import '../../../Components/spacer.dart';
@@ -17,19 +18,19 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  late TextEditingController userNameController;
+  late TextEditingController emailController;
   late TextEditingController passwordController;
 
   @override
   void initState() {
-    userNameController = TextEditingController();
+    emailController = TextEditingController();
     passwordController = TextEditingController();
     super.initState();
   }
 
   @override
   void dispose() {
-    userNameController.dispose();
+    emailController.dispose();
     passwordController.dispose();
     super.dispose();
   }
@@ -48,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
             fit: BoxFit.cover,
           ),
           InputField(
-              controller: userNameController,
+              controller: emailController,
               isPassword: false,
               labelTxt: 'Email',
               icon: Icons.person),
@@ -62,13 +63,12 @@ class _LoginPageState extends State<LoginPage> {
           PrimaryBtn(
               btnText: 'Login',
               btnFun: () =>
-                  login(userNameController.text, passwordController.text))
+                  login(emailController.text, passwordController.text))
         ]),
       ),
     );
   }
 
-  login(String userName, String password) {
-    print('Hai');
-  }
+  login(String email, String password) =>
+      AWSServices().createInitialRecord(email, password);
 }
