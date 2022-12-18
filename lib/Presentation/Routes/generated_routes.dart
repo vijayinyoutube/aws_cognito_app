@@ -1,4 +1,4 @@
-import 'package:aws_cognito_app/Presentation/Screens/Login/UI/login_page.dart';
+import '../Screens/Login/UI/login_page.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
