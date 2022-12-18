@@ -23,7 +23,7 @@
 
 <p align="center">
 
-[<img src="" width="100%">](https://youtu.be/NkOXry6jbTQ)
+[<img src="https://user-images.githubusercontent.com/58719230/208311347-7213c666-a690-4295-865d-fbc060e1cea7.png" width="100%">](https://youtu.be/NkOXry6jbTQ)
 
 </p>
 
@@ -37,7 +37,7 @@
 
 ## App
   
-Check out the video tutorial 👉 : 
+Check out the video tutorial 👉 : https://youtu.be/jxPjDb9uH1A
 
 To know more awesome content about Flutter., 
 
